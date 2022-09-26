@@ -2,10 +2,24 @@
 //
 
 #include <iostream>
-
+#include "incDinMas.h"
 int main()
 {
     std::cout << "Hello World!\n";
+	/* {
+		incDinMas A((1024 * 1024));
+		A.sumOfMasEl();
+	}*/
+	/* {
+		char symbol=-128;
+		while (symbol < 128)
+		{
+			std::cout << static_cast<int>(symbol)<<"\t"<<symbol << std::endl;
+			if (symbol == 127)
+				break;
+			symbol++;
+		}
+	}*/
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
