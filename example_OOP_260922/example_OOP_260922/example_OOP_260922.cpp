@@ -4,6 +4,7 @@
 #include <iostream>
 #include "incDinMas.h"
 #include "inhabDinMas.h"
+#include "polyDinMas.h"
 int main()
 {
     std::cout << "Hello World!\n";
@@ -21,11 +22,19 @@ int main()
 			symbol++;
 		}
 	}*/
-	{
+	/*{
 		inhabDinMas B((1024 * 1024));
 		Owner C((1024 * 1024));
 		C.initMasValue();
 		C.sumOfMasValue();	
+	}*/ 
+	{
+		polyDinMas* C = new intOwner((1024 * 1024));
+		C->sumOfMasValue();
+		delete C;
+		C = new symbolOwner((1024 * 1024));
+		C->sumOfMasValue();
+		delete C;
 	}
 }
 

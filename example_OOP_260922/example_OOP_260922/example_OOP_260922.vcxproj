@@ -130,10 +130,12 @@
     <ClCompile Include="example_OOP_260922.cpp" />
     <ClCompile Include="incDinMas.cpp" />
     <ClCompile Include="inhabDinMas.cpp" />
+    <ClCompile Include="polyDinMas.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="incDinMas.h" />
     <ClInclude Include="inhabDinMas.h" />
+    <ClInclude Include="polyDinMas.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

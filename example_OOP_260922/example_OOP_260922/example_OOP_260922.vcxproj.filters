@@ -24,12 +24,18 @@
     <ClCompile Include="inhabDinMas.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="polyDinMas.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="incDinMas.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="inhabDinMas.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="polyDinMas.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
