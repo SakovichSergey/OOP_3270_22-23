@@ -129,9 +129,11 @@
   <ItemGroup>
     <ClCompile Include="example_OOP_260922.cpp" />
     <ClCompile Include="incDinMas.cpp" />
+    <ClCompile Include="inhabDinMas.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="incDinMas.h" />
+    <ClInclude Include="inhabDinMas.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

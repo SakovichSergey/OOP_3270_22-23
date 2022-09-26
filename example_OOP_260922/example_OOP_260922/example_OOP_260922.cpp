@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "incDinMas.h"
+#include "inhabDinMas.h"
 int main()
 {
     std::cout << "Hello World!\n";
@@ -20,6 +21,12 @@ int main()
 			symbol++;
 		}
 	}*/
+	{
+		inhabDinMas B((1024 * 1024));
+		Owner C((1024 * 1024));
+		C.initMasValue();
+		C.sumOfMasValue();	
+	}
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
