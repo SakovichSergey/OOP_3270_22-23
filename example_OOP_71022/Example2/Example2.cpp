@@ -8,7 +8,7 @@
 */
 int main()
 {
-	/*masclass A(5);
+	masclass A(5);
 	A.outputMas();
 	A.summOfVal();
 	masclass* B;
@@ -19,7 +19,7 @@ int main()
 	C = new masclass(std::move(A));
 	C->outputMas();
 	C->summOfVal();
-	//A.outputMas();//C26800*/
+	//A.outputMas();//C26800
 	std::cout << "Operators \n";
 	masclass D(5),E,F;
 	D.outputMas();
