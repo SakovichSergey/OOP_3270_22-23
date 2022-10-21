@@ -15,6 +15,16 @@ public:
 	}
 };
 static print println;
+class Point
+{
+	int x, y;
+public:
+	Point(int X,int Y):x(X),y(Y){}
+	void outPoint()
+	{
+		[this]() {println("Point::x = "); println(x); println("Point::y = "); println(y); }();
+	}
+};
 int main()
 {
 	//Лямбда - выражения
@@ -39,6 +49,14 @@ int main()
 	println(cVal);
 	println(dVal);
 	println(bVal);
+	[cVal, dVal]() {auto eVal = cVal + dVal; println(eVal); }();
+	[cVal, &dVal]() {dVal = cVal + dVal; println(dVal); }();
+	println(dVal);
+	[&]() {auto fVal = aVal + bVal + cVal; cVal++; println(fVal); }();
+	println(cVal);
+	[=]() {/*aVal++;*/auto fVal = aVal + bVal + cVal; println(fVal); }();
+	Point p(11, 13);
+	p.outPoint();
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
