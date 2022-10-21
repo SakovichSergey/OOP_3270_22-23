@@ -34,6 +34,7 @@ namespace CppCLRWinformsProjekt {
 				delete components;
 			}
 		}
+	private: int x;
     private: System::Windows::Forms::Label^ label1;
     private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::MenuStrip^ menuStrip1;
@@ -101,7 +102,7 @@ namespace CppCLRWinformsProjekt {
 			// âûõîäToolStripMenuItem
 			// 
 			this->âûõîäToolStripMenuItem->Name = L"âûõîäToolStripMenuItem";
-			this->âûõîäToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->âûõîäToolStripMenuItem->Size = System::Drawing::Size(109, 22);
 			this->âûõîäToolStripMenuItem->Text = L"Âûõîä";
 			this->âûõîäToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::âûõîäToolStripMenuItem_Click);
 			// 
@@ -117,11 +118,12 @@ namespace CppCLRWinformsProjekt {
 			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"Form1";
 			this->Text = L"Form1";
+			this->MouseDoubleClick += gcnew System::Windows::Forms::MouseEventHandler(this, &Form1::Form1_MouseDoubleClick);
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
-
+			x = 0;
 		}
 #pragma endregion
     private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) 
@@ -132,5 +134,9 @@ namespace CppCLRWinformsProjekt {
 	{
 		this->Close();
 	}
+private: System::Void Form1_MouseDoubleClick(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) 
+{
+	this->label1->Text = x.ToString();
+}
 };
 }

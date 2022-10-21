@@ -1,4 +1,4 @@
-﻿// example1.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+﻿// example2.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
 #include <iostream>
@@ -7,37 +7,38 @@ class print
 public:
 	void operator()(int x)
 	{
-		std::cout << x << "\t";
+		std::cout << x << "\n";
 	}
 	void operator()(const char* str)
 	{
 		std::cout << str;
 	}
-	void operator()()
-	{
-		std::cout << "\n";
-	}
 };
 static print println;
 int main()
 {
-    std::cout << "Hello World!\n";
-	println("Hello World!\n");
-	int aV = 0b11111111;
-	int bV = 0377;//double
-	int cV = 0xFF;
-	println(aV);
-	println(bV);
-	println(cV);
-	println();
-	//printf_s("%d \t %x \t %o \n", 255, 255, 255);
-	auto dV = 255ull;
-	//Спецификатор auto
-	auto eV = 0.0;
-	auto* aPtr = &bV; //&aV;
-	//int* bPtr = &bV; //&aV;
-	auto* cPtr = new auto(aV);
-	
+	//Лямбда - выражения
+	[](){println("Lambda expression!\n"); }();
+	//[] - блок захвата
+	//() - блок списка формальных аргументов
+	//{} - блок кода
+	//() - вызов лямбда выражения
+	int aVal = 0;
+	[](int value){value++; println(value); }(aVal);
+	println(aVal);
+	[](int* ptr) {(* ptr)++; println(*ptr); }(&aVal);
+	println(aVal);
+	[](int& lptr) {lptr++; println(lptr); }(aVal);
+	println(aVal);
+	auto bVal = [](int& lptr) {lptr++; return lptr; }(aVal);
+	println(bVal);
+	println(aVal);
+	auto func = [](int& lptr){lptr++; return lptr; };
+	auto cVal = func(bVal);
+	auto dVal = func(bVal);
+	println(cVal);
+	println(dVal);
+	println(bVal);
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
